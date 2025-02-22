@@ -1,0 +1,6 @@
+/bin/
+.*.tgt
+
+*.tfstate
+*.tfstate.backup
+.terraform
