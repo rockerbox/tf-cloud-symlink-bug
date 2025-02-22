@@ -4,10 +4,10 @@ provider "aws" {
   default_tags {
     tags = {
       "Component"    = "tfc-symlink-bug/module-1"
-      "Environment"  = "Development"
+      "Environment"  = var.environment
       "Owner"        = "dlidralporter"
       "Team"         = "Infrastructure"
-      "VantaNonProd" = "true"
+      "VantaNonProd" = var.environment == "Production" ? "false" : "true"
     }
   }
 }
